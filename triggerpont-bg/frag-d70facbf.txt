@@ -1,0 +1,365 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+html{scroll-behavior:smooth;background:#060D1A}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tp-pulse{animation:none!important}.tp-track{animation:none!important}}
+body{margin:0;background:#060D1A;color:#E2E8F0;font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.tp-wrap *{box-sizing:border-box}
+.tp-wrap{background:#060D1A;color:#E2E8F0;font-size:16px;line-height:1.6;overflow-x:hidden}
+.tp-in{max-width:1080px;margin:0 auto;padding:0 20px}
+.tp-narrow{max-width:760px;margin:0 auto}
+.tp-top{position:sticky;top:0;z-index:50;background:#DC2626;color:#fff;text-align:center;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px}
+.tp-sec{padding:64px 0}
+.tp-sec.tp-a{background:#060D1A}
+.tp-sec.tp-b{background:#091122;border-top:1px solid #1E293B;border-bottom:1px solid #1E293B}
+.tp-h1{font-weight:800;text-transform:uppercase;color:#fff;font-size:30px;line-height:1.15;text-align:center;margin:18px 0 18px}
+.tp-h2{font-weight:800;text-transform:uppercase;color:#fff;font-size:24px;line-height:1.2;text-align:center;margin:0 0 14px}
+.tp-grad{background:linear-gradient(90deg,#34D399,#6EE7B7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tp-kick{display:block;text-align:center;color:#34D399;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.tp-sub{text-align:center;color:#94A3B8;margin:0 auto 28px;max-width:640px}
+.tp-pill{display:flex;width:max-content;max-width:100%;margin:0 auto;align-items:center;gap:8px;border:1px solid rgba(16,185,129,.4);background:rgba(16,185,129,.1);color:#6EE7B7;border-radius:999px;padding:7px 16px;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.tp-box{background:rgba(30,41,59,.55);border:1px solid #1E293B;border-radius:16px;padding:16px 20px;text-align:center;color:#E2E8F0;max-width:640px;margin:0 auto 28px}
+.tp-frame{background:#0F172A;border:1px solid #1E293B;border-radius:18px;padding:10px;margin:0 auto;max-width:620px}
+.tp-frame img{display:block;width:100%;height:auto;border-radius:12px}
+.tp-p{color:#94A3B8;text-align:center;max-width:680px;margin:26px auto}
+.tp-p b{color:#fff}
+.tp-btn{display:block;width:100%;max-width:520px;margin:0 auto;text-align:center;text-decoration:none;background:#10B981;color:#020617;font-weight:900;font-size:16px;letter-spacing:.04em;text-transform:uppercase;border-radius:12px;padding:18px 18px;box-shadow:0 10px 30px rgba(16,185,129,.25)}
+.tp-btn.tp-buy{background:#00923F;color:#fff;box-shadow:0 10px 30px rgba(0,146,63,.3)}
+.tp-pulse{animation:tp-pulse 2.2s ease-in-out infinite}
+@keyframes tp-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.tp-note{text-align:center;color:#94A3B8;font-size:13px;margin-top:12px}
+.tp-hr{border:0;border-top:1px solid #1E293B;margin:48px 0}
+.tp-marq{overflow:hidden;margin-top:28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.tp-track{display:flex;gap:14px;width:max-content;animation:tp-marq 38s linear infinite}
+.tp-track img{width:220px;height:auto;border-radius:12px;border:1px solid #1E293B;display:block}
+@keyframes tp-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tp-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tp-card{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:24px}
+.tp-card h3{font-weight:800;text-transform:uppercase;font-size:18px;margin:0 0 16px}
+.tp-no h3{color:#FDA4AF}.tp-no{border-color:rgba(220,38,38,.45);background:rgba(76,5,25,.35)}
+.tp-si h3{color:#6EE7B7}.tp-si{border-color:rgba(16,185,129,.45);background:rgba(6,78,59,.25)}
+.tp-list{list-style:none;margin:0;padding:0}
+.tp-list li{position:relative;padding:8px 0 8px 32px;color:#E2E8F0;border-bottom:1px solid rgba(51,65,85,.5)}
+.tp-list li:last-child{border-bottom:0}
+.tp-list li:before{position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.tp-x li:before{content:'✕';background:rgba(220,38,38,.2);color:#F87171}
+.tp-v li:before{content:'✓';background:rgba(16,185,129,.2);color:#34D399}
+.tp-prof{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tp-prof div{background:#0F172A;border:1px solid #1E293B;border-left:4px solid #10B981;border-radius:0;padding:16px 18px;font-weight:700;font-size:14px;text-transform:uppercase;color:#E2E8F0;line-height:1.45}
+.tp-timer{display:flex;justify-content:center;align-items:center;gap:10px;margin:22px 0 28px}
+.tp-timer .tp-t{background:#0F172A;border:1px solid #334155;border-radius:14px;min-width:92px;padding:12px 8px;text-align:center}
+.tp-timer b{display:block;font-size:40px;font-weight:800;color:#fff;line-height:1}
+.tp-timer small{font-size:11px;letter-spacing:.12em;color:#94A3B8;font-weight:700}
+.tp-timer .tp-dots{font-size:34px;font-weight:800;color:#F87171}
+.tp-wins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tp-win{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:20px}
+.tp-win .tp-ic{width:38px;height:38px;border-radius:50%;background:rgba(16,185,129,.15);color:#34D399;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.tp-win p{margin:0;color:#E2E8F0;font-size:15px}
+.tp-get{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.tp-bon{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tp-bcard{background:#0F172A;border:1px solid #1E293B;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.tp-bcard img{width:100%;height:auto;display:block}
+.tp-bcard .tp-bb{padding:20px}
+.tp-tag{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12px;font-weight:800;text-transform:uppercase}
+.tp-tag span:first-child{color:#94A3B8;text-decoration:line-through}
+.tp-tag span:last-child{background:#10B981;color:#020617;border-radius:999px;padding:3px 10px}
+.tp-bcard h3{margin:0 0 6px;color:#fff;font-size:18px;font-weight:800}
+.tp-bcard h4{margin:0 0 12px;color:#34D399;font-size:12px;letter-spacing:.06em;font-weight:800;text-transform:uppercase}
+.tp-bcard p{color:#94A3B8;font-size:14px;margin:0 0 12px}
+.tp-bcard .tp-list li{font-size:14px;padding:6px 0 6px 28px}
+.tp-bcard .tp-list li:before{width:18px;height:18px;font-size:10px;top:7px}
+#tp-offer{scroll-margin-top:24px}
+.tp-offer{max-width:620px;margin:0 auto;background:#0F172A;border:2px solid #10B981;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(16,185,129,.15)}
+.tp-ribbon{background:#10B981;color:#020617;text-align:center;font-weight:900;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:10px}
+.tp-ob{padding:26px 24px}
+.tp-ob h3{text-align:center;color:#fff;font-weight:800;font-size:24px;text-transform:uppercase;margin:0 0 4px}
+.tp-ob .tp-mini{text-align:center;color:#34D399;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.tp-price{text-align:center;margin:22px 0 6px}
+.tp-old{color:#94A3B8;font-size:16px}
+.tp-old s{color:#F87171}
+.tp-save{display:inline-block;margin-left:8px;background:rgba(220,38,38,.18);color:#FDA4AF;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800}
+.tp-big{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:64px;line-height:1.05;color:#fff;margin:8px 0 2px}
+.tp-once{text-align:center;color:#94A3B8;font-size:13px;margin-bottom:20px}
+.tp-bonbox{border:2px dashed rgba(16,185,129,.55);border-radius:14px;padding:14px 16px;margin:16px 0 4px;background:rgba(16,185,129,.06)}
+.tp-bonbox p{margin:4px 0;color:#E2E8F0;font-size:14px}
+.tp-bonbox .tp-tot{color:#6EE7B7;font-weight:800;margin-top:8px}
+.tp-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;color:#94A3B8;font-size:12px;margin-top:14px}
+.tp-gar{background:#FFFDF9;color:#0F172A;padding:64px 0;border-top:1px solid #E2E8F0}
+.tp-gar .tp-gin{display:flex;gap:28px;align-items:center;max-width:820px;margin:0 auto}
+.tp-seal{flex:0 0 150px;height:150px;border-radius:50%;background:#10B981;color:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;border:6px double #fff;box-shadow:0 0 0 4px #10B981}
+.tp-seal small{font-size:10px;letter-spacing:.08em}
+.tp-seal b{font-size:30px;line-height:1}
+.tp-gar h2{color:#0F172A;text-align:left;font-weight:800;text-transform:uppercase;font-size:24px;margin:0 0 10px}
+.tp-gar p{margin:0;color:#334155}
+.tp-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tp-step{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:20px}
+.tp-step .tp-n{font-size:30px;font-weight:800;color:#10B981;line-height:1}
+.tp-step h3{color:#fff;font-size:16px;font-weight:800;margin:10px 0 6px}
+.tp-step p{color:#94A3B8;font-size:14px;margin:0 0 12px}
+.tp-step span{display:inline-block;font-size:11px;font-weight:800;color:#6EE7B7;background:rgba(16,185,129,.12);border-radius:999px;padding:3px 10px;text-transform:uppercase;letter-spacing:.05em}
+.tp-faq details{background:#0F172A;border:1px solid #1E293B;border-radius:14px;margin-bottom:10px}
+.tp-faq summary{cursor:pointer;list-style:none;padding:16px 46px 16px 18px;font-weight:700;color:#fff;position:relative}
+.tp-faq summary::-webkit-details-marker{display:none}
+.tp-faq summary:after{content:'+';position:absolute;right:18px;top:12px;font-size:22px;color:#34D399}
+.tp-faq details[open] summary:after{content:'–'}
+.tp-faq details p{margin:0;padding:0 18px 16px;color:#94A3B8}
+.tp-final{background:linear-gradient(180deg,#091122 0%,#040812 100%);padding:72px 0;text-align:center}
+.tp-final .tp-btn{border-radius:16px}
+.tp-foot{background:#030712;border-top:1px solid #0F172A;color:#64748B;font-size:12px;padding:44px 0;text-align:center}
+.tp-logo{width:44px;height:44px;border-radius:12px;background:#10B981;color:#020617;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.tp-foot h4{color:#E2E8F0;font-size:13px;letter-spacing:.08em;margin:0 0 22px;text-transform:uppercase}
+.tp-foot h5{color:#94A3B8;font-size:12px;letter-spacing:.08em;margin:0 0 8px;text-transform:uppercase}
+.tp-foot p{max-width:720px;margin:0 auto 18px;line-height:1.7}
+@media(min-width:900px){.tp-h1{font-size:46px}.tp-h2{font-size:34px}.tp-track img{width:260px}}
+@media(max-width:820px){.tp-cols,.tp-get{grid-template-columns:1fr}.tp-wins,.tp-bon{grid-template-columns:1fr}.tp-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tp-sec{padding:48px 0}.tp-in{padding:0 16px}.tp-h1{font-size:27px}.tp-h2{font-size:22px}.tp-prof,.tp-steps{grid-template-columns:1fr}.tp-big{font-size:56px}.tp-gar .tp-gin{flex-direction:column;text-align:center}.tp-gar h2{text-align:center}.tp-timer .tp-t{min-width:80px}.tp-timer b{font-size:34px}.tp-card{padding:20px}.tp-ob{padding:22px 16px}}
+@media(max-width:380px){.tp-h1{font-size:24px}.tp-h2{font-size:20px}.tp-btn{font-size:14px;padding:16px 12px}.tp-big{font-size:48px}.tp-top{font-size:11px}.tp-pill{font-size:10px;padding:6px 12px}.tp-track img{width:180px}}
+</style>
+<div class="tp-wrap">
+<div class="tp-top">Специална оферта само днес — <span id="tp-date">17 ноември 2026 г.</span></div>
+<section class="tp-sec tp-a" style="padding-top:32px">
+<div class="tp-in">
+<div class="tp-pill">🔒 100 % сигурно плащане</div>
+<h1 class="tp-h1">100+ визуални карти на <span class="tp-grad">отразената болка</span> и тригерните точки</h1>
+<div class="tp-box">Спрете да зубрите. Вижте мускулите, тригерните точки и моделите на болка с един поглед – за секунди.</div>
+<div class="tp-frame"><img alt="100+ визуални карти: отразена болка и тригерни точки" loading="eager" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg-usa-1.jpg"/></div>
+<p class="tp-p">Интуитивна визуална справочна библиотека, която показва <b>мускулите, възможните тригерни точки и типичните модели на отразена болка</b>, организирани по анатомични региони. Открийте ги за секунди в кабинета, докато учите или преди изпит – без да губите часове в прелистване на дебели учебници и разпилени записки.</p>
+<a class="tp-btn tp-pulse" href="#tp-offer">Вземете незабавен достъп сега ↓</a>
+<div class="tp-note">✉️ Незабавен достъп по имейл</div>
+<hr class="tp-hr"/>
+<h2 class="tp-h2">Вижте точно какво получавате.</h2>
+<div class="tp-frame" style="max-width:520px"><img alt="Визуални карти на таблет и на хартия" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg-usa-2.jpg"/></div>
+<div class="tp-marq"><div class="tp-track">
+<img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg1.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg2.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg3.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg4.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg5.jpg"/>
+<img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg1.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg2.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg3.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg4.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg5.jpg"/>
+</div></div>
+</div>
+</section>
+<section class="tp-sec tp-a" style="background:#060D1A;padding-top:16px">
+<div class="tp-in">
+<h2 class="tp-h2">От мъчително търсене към бързо визуално знание</h2>
+<p class="tp-sub">Сравнете ежедневието си преди и след Атласа на тригерните точки.</p>
+<div class="tp-cols">
+<div class="tp-card tp-no"><h3>Без визуалните карти</h3><ul class="tp-list tp-x">
+<li>Информация, разпиляна в десетки тежки учебници, презентации и записки.</li>
+<li>Постоянно Ви е трудно да запомните кой мускул към коя зона на болка принадлежи.</li>
+<li>Ценно време, загубено в търсене на анатомични рисунки по време на прегледите или между тях.</li>
+<li>Изнервящо е да обяснявате ясно и просто на пациентите си как се разпространява миофасциалната болка.</li>
+<li>Лесно се бърка къде пациентът усеща болката и кой мускул обикновено стои зад този модел на болка.</li>
+<li>Часове, прекарани в писане на собствени записки и обобщения от нулата.</li>
+<li>Напрежение преди практическите изпити по палпация и клиничната практика.</li>
+<li>Тежки учебници, в които е невъзможно да намерите нещо бързо на телефона.</li>
+<li>Стрес, загубено време и постоянна несигурност при прегледа.</li>
+</ul></div>
+<div class="tp-card tp-si"><h3>С визуалните карти</h3><ul class="tp-list tp-v">
+<li>Над 100 анатомични карти, систематично подредени по региони на тялото.</li>
+<li>Светкавична визуална справка за директна клинична употреба.</li>
+<li>Мускули, тригерни точки и разпространение на болката, показани кристално ясно.</li>
+<li>Ясни визуални ориентири за палпация, стегнати мускулни снопове и зони на отразена болка.</li>
+<li>Логична структура: глава, шиен отдел, горен крайник, гръб, таз, крак и стъпало.</li>
+<li>100 % дигитален материал, който можете да отворите веднага на телефон, таблет или компютър.</li>
+<li>Бърз преговор преди изпити, практически изпити, клинична практика или трудни случаи.</li>
+<li>Справочна библиотека за цял живот винаги под ръка, с файлове 300 DPI, оптимизирани за печат.</li>
+<li>Прецизност, клинична увереност и много спестени часове.</li>
+</ul></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">Терапевти и студенти</span>
+<h2 class="tp-h2">Атласът на тригерните точки е за Вас, ако:</h2>
+<div class="tp-prof" style="margin-top:26px">
+<div>Вие сте кинезитерапевт, остеопат, хиропрактор, масажист, треньор или студент в сферата на здравеопазването.</div>
+<div>Трудно Ви е да запомните толкова много сложни миофасциални модели на болка.</div>
+<div>Понякога Ви е трудно да свържете зоната на болка с мускулите, които обикновено стоят зад този модел на болка.</div>
+<div>Губите време в справки в няколко различни учебника и PDF файла, докато учите или работите с пациенти.</div>
+<div>Много часове, прекарани в правене на собствени листове за преговор, конспекти и анатомични скици.</div>
+<div>Искате висококачествен визуален инструмент, с който да обяснявате ясно отразената болка на пациентите си направо до кушетката.</div>
+<div>Искате незабавен достъп до картите на телефон, таблет или компютър, където и да се намирате.</div>
+<div>Тепърва навлизате в областта на опорно-двигателния апарат или се подготвяте за клинични изпити, практически изпити и клинична практика.</div>
+</div>
+<p class="tp-p">Ако се разпознавате в поне две от точките, Атласът на тригерните точки е създаден точно за да улесни клиничното Ви ежедневие и обучението Ви.</p>
+</div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in tp-narrow">
+<span class="tp-kick" style="color:#F87171">Ограничена въвеждаща цена</span>
+<h2 class="tp-h2">Колко още часа ще прекарате в търсене из разпилени учебници?</h2>
+<p class="tp-sub" style="margin-bottom:0">Възползвайте се от ограничената въвеждаща цена</p>
+<div aria-live="polite" class="tp-timer"><div class="tp-t"><b id="tp-mm">15</b><small>МИНУТИ</small></div><span class="tp-dots">:</span><div class="tp-t"><b id="tp-ss">00</b><small>СЕКУНДИ</small></div></div>
+<a class="tp-btn tp-buy" href="#tp-offer">Вземете незабавен достъп и започнете още днес ↓</a>
+<div class="tp-note">Незабавен достъп след потвърждение • Директно изтегляне</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">Какво печелите на практика</span>
+<h2 class="tp-h2">Как се променя ежедневието Ви в кабинета</h2>
+<div class="tp-wins" style="margin-top:26px">
+<div class="tp-win"><div class="tp-ic">1</div><p>Цялата важна клинична информация на едно място: ясни справочни карти между прегледите.</p></div>
+<div class="tp-win"><div class="tp-ic">2</div><p>Спестете ценно време: край на ровенето в дебели учебници, за да откриете мускул или модел на болка.</p></div>
+<div class="tp-win"><div class="tp-ic">3</div><p>Благодарение на илюстрациите лесно ще разберете къде се намират най-честите тригерни точки и как се проявяват моделите на отразена болка.</p></div>
+<div class="tp-win"><div class="tp-ic">4</div><p>Като бърза визуална справка преглеждате модела на болката и анатомичните ориентири за секунди.</p></div>
+<div class="tp-win"><div class="tp-ic">5</div><p>Учите много по-бързо визуално: всичко е организирано по анатомични региони, което прави атласа изключително практичен.</p></div>
+</div>
+<div class="tp-marq"><div class="tp-track" style="animation-duration:44s">
+<img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg3.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg4.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg5.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg1.jpg"/><img alt="Пример за карта" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg2.jpg"/>
+<img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg3.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg4.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg5.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg1.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg2.jpg"/>
+</div></div>
+</div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in">
+<span class="tp-kick">Незабавен достъп след поръчката</span>
+<h2 class="tp-h2">Какво получавате</h2>
+<div class="tp-get" style="margin-top:26px">
+<ul class="tp-list tp-v">
+<li>Над 100 визуални карти на отразената болка и тригерните точки.</li>
+<li>Систематично организирани по анатомични региони.</li>
+<li>Подробни карти на главата, лицето и шията.</li>
+<li>Карти на рамото, мишницата, предмишницата и ръката.</li>
+<li>Карти на гръдния и поясния отдел на гръбначния стълб.</li>
+<li>Карти на таза, тазобедрената става и седалищните мускули.</li>
+<li>Карти на бедрото, коляното, подбедрицата, глезена и стъпалото.</li>
+<li>Точна визуална идентификация на най-важните мускули.</li>
+<li>Модели на отразена болка, представени върху триизмерни анатомични фигури.</li>
+<li>Визуално маркирани костни ориентири и линии за палпация.</li>
+<li>Клиничен индекс, с който откривате всеки мускул за по-малко от 10 секунди.</li>
+<li>Интерактивни дигитални PDF файлове в ултра HD, калибрирани за печат.</li>
+<li>100 % съвместимо с телефон, таблет и компютър.</li>
+</ul>
+<div class="tp-frame"><img alt="Пълната библиотека с карти" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg-usa-1.jpg"/></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">И това не е всичко… получавате също</span>
+<h2 class="tp-h2">3 ексклузивни безплатни бонуса (на стойност 47 €)</h2>
+<div class="tp-bon" style="margin-top:26px">
+<div class="tp-bcard"><img alt="Бонус 1: Формуляри за бърза мускулна оценка" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/b1-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Стойност: 14 €</span><span>Безплатно</span></div>
+<h3>Бонус 1 · Формуляри за бърза мускулна оценка</h3>
+<h4>Клинични формуляри за преглед, които можете да отпечатате или да попълвате на таблет</h4>
+<p>Готови клинични формуляри, с които за секунди отбелязвате зоните на болка, интензитета ѝ (VAS скала), провокиращите движения, миофасциалната анамнеза и клиничните находки. Структурирайте прегледите си с пълна увереност.</p>
+<ul class="tp-list tp-v"><li>Оценка на мускулите и сухожилията, организирана по анатомични региони</li><li>Визуална аналогова скала (VAS) за интензитета на болката</li><li>Контролен списък за палпация на стегнати снопове и тригерни точки</li><li>Интерактивен дигитален формат и A4 за печат</li></ul>
+</div></div>
+<div class="tp-bcard"><img alt="Бонус 2: Визуално ръководство по палпаторна анатомия" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/b2-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Стойност: 17 €</span><span>Безплатно</span></div>
+<h3>Бонус 2 · Визуално ръководство по палпаторна анатомия</h3>
+<h4>Илюстриран атлас на костните ориентири и хода на мускулите</h4>
+<p>Богато илюстрирано ръководство с ясни костни ориентири, посоки на мускулните влакна и препоръчителни позиции на ръцете, за да откривате мускулите, сухожилията и тригерните точки в ежедневната практика без колебание.</p>
+<ul class="tp-list tp-v"><li>Клинични снимки с нанесени анатомични ориентири</li><li>Препоръчителни позиции на ръцете за всяка мускулна група</li><li>Типични грешки при палпация, които да избягвате</li><li>Идеален за бърз преговор преди работа в кабинета или изпит</li></ul>
+</div></div>
+<div class="tp-bcard"><img alt="Бонус 3: Обучителни плакати с висока резолюция за кабинета" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/b3-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Стойност: 16 €</span><span>Безплатно</span></div>
+<h3>Бонус 3 · Обучителни плакати с висока резолюция за кабинета</h3>
+<h4>Обучителни плакати, които ясно показват на пациента откъде идва болката</h4>
+<p>Плакати с много висока резолюция (300 DPI), които можете да отпечатате и да окачите в кабинета или в залата за терапия. Те ясно показват как болката в ръката често може да произхожда от структури в шията или рамото.</p>
+<ul class="tp-list tp-v"><li>Професионална резолюция 300 DPI във формат A3/A2</li><li>Изчистен, естетичен медицински дизайн, който подчертава професионалния облик на кабинета</li><li>Веднага подобрява разбирането и съдействието на пациента</li><li>Включва 6-те най-чести модела на отразена болка</li></ul>
+</div></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-a" id="tp-offer">
+<div class="tp-in">
+<span class="tp-kick" style="color:#F87171">⏰ Последен шанс – ограничена оферта днес</span>
+<h2 class="tp-h2">Пълният делукс пакет</h2>
+<p class="tp-sub">Незабавен дигитален достъп след потвърждение • 7-дневна гаранция за връщане на парите</p>
+<div class="tp-offer">
+<div class="tp-ribbon">🔥 Въвеждаща оферта · само днес</div>
+<div class="tp-ob">
+<h3>Пълен делукс пакет</h3>
+<div class="tp-mini">Атлас на тригерните точки · 100+ визуални карти</div>
+<div class="tp-frame" style="padding:6px;margin-bottom:18px"><img alt="Атлас на тригерните точки – Пълен делукс пакет" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas-5/triggerpont-bg/landing-img/pg-usa-1.jpg"/></div>
+<ul class="tp-list tp-v">
+<li>📚 Цялата библиотека: 100+ подробни визуални карти</li>
+<li>🧭 Всички региони на тялото: глава, шия, рамо, гръб, таз, долен крайник</li>
+<li>🔎 Азбучен клиничен индекс и търсене по симптом за 10 секунди</li>
+<li>📱 Оптимизирано за телефон и готово за печат в 300 DPI</li>
+<li>♾️ Незабавен достъп и безплатни актуализации за цял живот</li>
+</ul>
+<div class="tp-bonbox">
+<p>🎁 Бонус 1: Формуляри за бърза мускулна оценка</p>
+<p>🎁 Бонус 2: Визуално ръководство по палпаторна анатомия</p>
+<p>🎁 Бонус 3: Обучителни плакати с висока резолюция за кабинета</p>
+<p class="tp-tot">Обща стойност на бонусите: 47 € – днес ги получавате безплатно</p>
+</div>
+<div class="tp-price">
+<div class="tp-old"><s>{{original_price}}</s> редовна цена <span class="tp-save">Спестявате {{savings}}</span></div>
+<span class="tp-big">{{price}}</span>
+</div>
+<div class="tp-once">Сигурно еднократно плащане · Доживотен достъп</div>
+<a class="tp-btn tp-buy tp-pulse" href="/checkout">ИСКАМ ДОСТЪП СЕГА – {{price}}</a>
+<div class="tp-trust"><span>🔒 100 % плащане със SSL криптиране</span><span>⚡ Незабавна доставка по имейл</span><span>🛡️ 7-дневна гаранция</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tp-gar">
+<div class="tp-in"><div class="tp-gin">
+<div class="tp-seal"><small>100 % УДОВЛЕТВОРЕНОСТ</small><b>7 ДНИ</b><small>ГАРАНЦИЯ</small></div>
+<div><h2>Безусловна 7-дневна гаранция</h2>
+<p>Защитени сте от пълна, безусловна 7-дневна гаранция. Ако прецените, че визуалният атлас не отговаря на очакванията Ви в обучението или в кабинета, уведомете ни в рамките на срока. Ще Ви върнем бързо цялата сума – без усложнения и без обяснения.</p></div>
+</div></div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in">
+<h2 class="tp-h2">Поръчайте сега и получете незабавен достъп</h2>
+<p class="tp-sub">Лесен, бърз и сигурен процес в 4 прости стъпки.</p>
+<div class="tp-steps">
+<div class="tp-step"><div class="tp-n">01</div><h3>Кликнете върху бутона</h3><p>Изберете Пълния делукс пакет ({{price}}).</p><span>Готово за 1 минута</span></div>
+<div class="tp-step"><div class="tp-n">02</div><h3>100 % сигурно плащане</h3><p>Платете сигурно чрез защитено плащане с 256-битово SSL криптиране (банкова карта, Apple Pay, Google Pay).</p><span>Готово за 1 минута</span></div>
+<div class="tp-step"><div class="tp-n">03</div><h3>Незабавна доставка</h3><p>До 60 секунди ще получите по имейл Вашия личен защитен линк за изтегляне.</p><span>Готово за 1 минута</span></div>
+<div class="tp-step"><div class="tp-n">04</div><h3>Приложимо в клиничната практика веднага</h3><p>Разглеждайте картите веднага на телефон или таблет или отпечатайте плакатите с висока резолюция за кабинета си.</p><span>Готово за 1 минута</span></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in tp-narrow">
+<span class="tp-kick">Ясни отговори</span>
+<h2 class="tp-h2">Често задавани въпроси</h2>
+<p class="tp-sub">Всичко, което трябва да знаете, преди да поръчате визуалните карти.</p>
+<div class="tp-faq">
+<details><summary>Нужен ли ми е предварителен опит с мануална терапия или миофасциални тригерни точки?</summary><p>Изобщо не. Картите са изградени на две нива: интуитивна визуална яснота за студенти и начинаещи (цветово кодирани анатомични ориентири и ясно отбелязани модели на болка) и задълбочена клинична прецизност за опитни терапевти (точна инервация, начало и залавяне, както и насочени указания за палпация).</p></details>
+<details><summary>Подходящ ли е материалът за студенти по медицина и кинезитерапия?</summary><p>Да, това е идеалният инструмент за преговор за студенти по кинезитерапия, остеопатия, хиропрактика, медицина, спорт и масаж. Спестявате стотици часове в правене на конспекти от тежки учебници и се подготвяте ефективно за практическите изпити по палпация и клиничната практика.</p></details>
+<details><summary>Дигитално или печатно е съдържанието?</summary><p>100 % дигитален материал с незабавен достъп под формата на интерактивни PDF файлове с много висока резолюция (300 DPI). Носете го навсякъде – на телефона, таблета или компютъра – и отпечатайте картите, които искате да използвате в кабинета.</p></details>
+<details><summary>Как получавам достъп след поръчката?</summary><p>Веднага щом плащането Ви бъде обработено, ще получите имейл за потвърждение с Вашия личен защитен линк за достъп. За по-малко от 60 секунди можете да започнете да разглеждате картите си.</p></details>
+<details><summary>Наистина ли достъпът е доживотен?</summary><p>Да! С Пълния делукс пакет получавате неограничен доживотен достъп до цялата библиотека без абонамент и без периодични плащания. Всички бъдещи актуализации и нови карти са включени напълно безплатно.</p></details>
+<details><summary>Мога ли да отпечатам анатомичните карти за кабинета си?</summary><p>Разбира се! Всички PDF файлове са с кристално ясна висока резолюция 300 DPI. Можете да ги отпечатате във формат A4 за папката си или в по-голям формат A3/A2 като стенни плакати за кабинета си.</p></details>
+<details><summary>Замества ли материалът акредитирано обучение?</summary><p>Не. Този визуален атлас е учебно и справочно помагало, което обогатява знанията Ви и улеснява ежедневната Ви практика. Той не замества образованието, правоспособността или официалното обучение по диагностика.</p></details>
+<details><summary>Показват ли картите точната причина за болката на всеки пациент?</summary><p>Картите точно възпроизвеждат миофасциалните модели на отразена болка, описани в специализираната литература (фундаменталния труд на Травел и Симънс). Въпреки това болката на пациента винаги трябва да се оценява чрез подробна анамнеза и диференциална диагноза, за да се изключат червените флагове (тревожни признаци).</p></details>
+<details><summary>Как работи гаранцията за връщане на парите?</summary><p>Защитени сте от безусловна 7-дневна гаранция за връщане на парите. Ако по някаква причина материалът не отговаря на очакванията Ви, просто ни уведомете и веднага ще Ви върнем цялата сума – без въпроси.</p></details>
+</div>
+</div>
+</section>
+<section class="tp-final">
+<div class="tp-in tp-narrow">
+<span class="tp-kick">Издигнете клиничната си практика</span>
+<h2 class="tp-h2">Започнете сега</h2>
+<p class="tp-sub">Незабавен дигитален достъп до цялата библиотека с над 100 визуални карти на отразената болка и тригерните точки.</p>
+<a class="tp-btn" href="#tp-offer">Вземете делукс пакета ({{price}}) ↓</a>
+<div class="tp-note">Вижте офертата</div>
+<div class="tp-trust"><span>🔒 256-битово криптирано плащане</span><span>🛡️ 7-дневна гаранция за връщане на парите</span><span>✉️ Незабавна доставка по имейл</span></div>
+</div>
+</section>
+<footer class="tp-foot">
+<div class="tp-in">
+<div class="tp-logo">TP</div>
+<h4>Атлас на тригерните точки: отразена болка и тригерни точки</h4>
+<h5>Правен и медицински отказ от отговорност</h5>
+<p>Този анатомичен учебен и справочен материал е създаден за продължаващо обучение, преговор за студенти, клинична справка и обучение на пациенти. Той не представлява индивидуален медицински съвет, не поставя диагнози и не замества прегледа от правоспособен медицински специалист. Прилагането на мануални техники и палпация е лична отговорност на всеки терапевт и трябва да остава в рамките на неговата професионална и правна компетентност.</p>
+<p>© 2026 Атлас на тригерните точки. Всички права запазени. Създадено за медицински специалисти.</p>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+ try{var d=new Date(),m=['януари','февруари','март','април','май','юни','юли','август','септември','октомври','ноември','декември'];var el=document.getElementById('tp-date');if(el)el.textContent=d.getDate()+' '+m[d.getMonth()]+' '+d.getFullYear()+' г.';}catch(e){}
+ var mm=document.getElementById('tp-mm'),ss=document.getElementById('tp-ss');if(!mm||!ss)return;
+ var end;try{end=parseInt(localStorage.getItem('tp_end')||'0',10);}catch(e){end=0}
+ var now=Date.now();if(!end||end<now){end=now+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}}
+ function tick(){var r=Math.max(0,end-Date.now());if(r===0){end=Date.now()+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}r=15*60*1000;}var s=Math.floor(r/1000);mm.textContent=String(Math.floor(s/60)).padStart(2,'0');ss.textContent=String(s%60).padStart(2,'0');}
+ tick();setInterval(tick,1000);
+})();
+</script>

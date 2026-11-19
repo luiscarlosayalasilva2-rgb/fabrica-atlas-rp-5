@@ -266,7 +266,7 @@ html{scroll-behavior:smooth}
     <div class="fj-bon">
       <div class="fj-bcard">
         <div class="fj-bimg"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/bonus-1.jpg" alt="バスケ専用スピード＆アジリティドリル100" width="900" height="600" loading="lazy"><span class="fj-btag">特典</span></div>
-        <div class="fj-bbody"><h3>バスケ専用スピード＆アジリティドリル100</h3><p>爆発力、方向転換、ディフェンスのフットワークを伸ばす完全なプログラムです。</p><div class="fj-bval"><s class="fj-num">¥4,980</s><span class="fj-free">無料</span></div></div>
+        <div class="fj-bbody"><h3>バスケ専用スピード＆<span style="white-space:nowrap">アジリティドリル100</span></h3><p>爆発力、方向転換、ディフェンスのフットワークを伸ばす完全なプログラムです。</p><div class="fj-bval"><s class="fj-num">¥4,980</s><span class="fj-free">無料</span></div></div>
       </div>
       <div class="fj-bcard">
         <div class="fj-bimg"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/bonus-2.jpg" alt="ボールを使ったコンディショニング50" width="900" height="600" loading="lazy"><span class="fj-btag">特典</span></div>
@@ -312,7 +312,7 @@ html{scroll-behavior:smooth}
       <div class="fj-obon">
         <span class="fj-obon-t">無料特典3つ</span>
         <ul>
-          <li>バスケ専用スピード＆アジリティドリル100</li>
+          <li><span>バスケ専用スピード＆<span style="white-space:nowrap">アジリティドリル100</span></span></li>
           <li>ボールを使ったコンディショニング50</li>
           <li>週間練習計画テンプレート30</li>
         </ul>

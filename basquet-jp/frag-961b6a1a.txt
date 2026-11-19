@@ -1,0 +1,435 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{background:#f7fbfd !important;margin:0;padding:0;overflow-x:hidden}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fj-pulse{animation:none !important}}
+#fj-offer{scroll-margin-top:24px}
+.fj-root,.fj-root *{box-sizing:border-box}
+.fj-root{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif !important;color:#041127 !important;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;line-break:strict;overflow-wrap:anywhere}
+.fj-root h1,.fj-root h2,.fj-root h3{font-family:'Sora','Noto Sans JP',sans-serif !important;margin:0;font-weight:900;text-wrap:balance;letter-spacing:0}
+.fj-root p{margin:0}
+.fj-root a{text-decoration:none}
+.fj-root img{max-width:100%;height:auto;display:block}
+.fj-num{font-family:'Sora','Noto Sans JP',sans-serif !important;font-variant-numeric:tabular-nums}
+.fj-s{width:100vw;margin-left:calc(50% - 50vw);padding:56px 16px}
+.fj-in{max-width:1080px;margin:0 auto}
+.fj-head{text-align:center;max-width:720px;margin:0 auto 32px}
+.fj-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#5ea500 !important;text-transform:uppercase}
+.fj-h2{font-size:clamp(26px,5vw,44px);line-height:1.25;margin-top:10px !important;color:#041127 !important}
+.fj-sub{margin-top:12px !important;color:#4b5666 !important;font-size:15.5px}
+
+/* barra superior */
+.fj-top{width:100vw;margin-left:calc(50% - 50vw);background:linear-gradient(90deg,#e7336f,#f0703a) !important;color:#ffffff !important;text-align:center;font-weight:700;font-size:13px;letter-spacing:.06em;padding:10px 12px;line-height:1.5}
+
+/* hero */
+.fj-hero{background:linear-gradient(180deg,#041127 0%,#0b1f3b 50%,#041127 100%) !important;color:#ffffff !important;padding:28px 16px 48px;text-align:center}
+.fj-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(147,222,4,.45);background:rgba(147,222,4,.12) !important;color:#93de04 !important;font-size:12.5px;font-weight:700;letter-spacing:.1em;padding:6px 16px;border-radius:999px}
+.fj-h1{font-size:clamp(34px,7.4vw,72px);line-height:1.12;margin-top:18px !important;color:#ffffff !important}
+.fj-h1 .fj-l{display:block;color:#93de04 !important;font-size:1.35em;line-height:1}
+.fj-hero-p{max-width:640px;margin:16px auto 0 !important;color:rgba(255,255,255,.78) !important;font-size:15.5px}
+.fj-hero-img{width:100%;max-width:560px;aspect-ratio:1/1;object-fit:cover;margin:28px auto 0;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.45);background:#0b1f3b}
+.fj-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:400px;background:#93de04 !important;color:#041127 !important;font-weight:900;font-size:16px;letter-spacing:.04em;padding:16px 24px;border-radius:999px;box-shadow:0 10px 30px rgba(147,222,4,.35);border:0;cursor:pointer;line-height:1.35}
+.fj-btn:hover{background:#a5ef1a !important}
+.fj-pulse{animation:fj-pulse 2.2s ease-in-out infinite}
+@keyframes fj-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.fj-hero .fj-btn{margin-top:28px}
+.fj-safe{margin-top:12px !important;font-size:12.5px;color:rgba(255,255,255,.62) !important;display:flex;align-items:center;justify-content:center;gap:6px}
+
+/* cards contenido */
+.fj-light{background:#f7fbfd !important}
+.fj-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fj-card{background:#ffffff !important;border:1px solid #e3e9ef;border-radius:20px;padding:26px 22px;box-shadow:0 6px 24px rgba(4,17,39,.06)}
+.fj-ico{width:48px;height:48px;border-radius:14px;background:#041127 !important;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.fj-card h3{font-size:18px;color:#041127 !important;font-family:'Noto Sans JP',sans-serif !important;font-weight:700}
+.fj-card p{margin-top:8px !important;color:#4b5666 !important;font-size:14.5px}
+.fj-chips{list-style:none;padding:0;margin:16px 0 0}
+.fj-chips li{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:#041127 !important;padding:5px 0;font-weight:500}
+.fj-chips li:before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:#93de04 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23041127' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+
+/* beneficios navy */
+.fj-navy{background:#041127 !important;color:#ffffff !important}
+.fj-navy .fj-h2{color:#ffffff !important}
+.fj-navy .fj-sub{color:rgba(255,255,255,.7) !important}
+.fj-navy .fj-eyebrow{color:#93de04 !important}
+.fj-ben{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.fj-ben-i{background:rgba(255,255,255,.05) !important;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px 18px}
+.fj-ben-i .fj-ico{background:rgba(147,222,4,.14) !important;width:44px;height:44px;margin-bottom:14px}
+.fj-ben-i h3{font-family:'Noto Sans JP',sans-serif !important;font-size:15.5px;font-weight:700;color:#ffffff !important;line-height:1.45}
+.fj-ben-i p{margin-top:6px !important;font-size:13.5px;color:rgba(255,255,255,.66) !important;line-height:1.6}
+
+/* bonos */
+.fj-bon{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fj-bcard{background:#ffffff !important;border:1px solid #e3e9ef;border-radius:20px;overflow:hidden;box-shadow:0 6px 24px rgba(4,17,39,.06);display:flex;flex-direction:column}
+.fj-bimg{position:relative}
+.fj-bimg img{width:100%;aspect-ratio:3/2;object-fit:cover;background:#0b1f3b}
+.fj-btag{position:absolute;top:12px;left:12px;background:#93de04 !important;color:#041127 !important;font-size:12px;font-weight:900;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.fj-bbody{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.fj-bbody h3{font-family:'Noto Sans JP',sans-serif !important;font-size:16.5px;font-weight:700;color:#041127 !important;line-height:1.45}
+.fj-bbody p{margin-top:8px !important;color:#4b5666 !important;font-size:14px;flex:1}
+.fj-bval{margin-top:16px !important;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.fj-bval s{color:#8a94a3 !important;font-size:15px}
+.fj-free{background:#e9f8cc !important;color:#3f7300 !important;font-weight:900;font-size:13px;padding:3px 12px;border-radius:999px;letter-spacing:.06em}
+
+/* countdown + oferta */
+.fj-offer-s{background:linear-gradient(180deg,#f7fbfd 0%,#eef1f5 100%) !important}
+.fj-cd-l{display:block;text-align:center;color:#e7000b !important;font-weight:900;font-size:13px;letter-spacing:.14em}
+.fj-cd{display:flex;justify-content:center;gap:10px;margin:12px 0 0}
+.fj-cd-b{background:#041127 !important;color:#ffffff !important;border-radius:14px;min-width:74px;padding:10px 8px;text-align:center}
+.fj-cd-b b{display:block;font-size:30px;line-height:1.1;font-weight:800;color:#ffffff !important}
+.fj-cd-b span{display:block;font-size:11px;color:rgba(255,255,255,.65) !important;margin-top:2px}
+.fj-pill-red{display:inline-block;background:rgba(231,0,11,.1) !important;color:#e7000b !important;font-size:12px;font-weight:900;letter-spacing:.1em;padding:5px 14px;border-radius:999px;margin-top:28px}
+.fj-ocard{position:relative;max-width:560px;margin:34px auto 0;background:#ffffff !important;border:2px solid #93de04;border-radius:24px;padding:40px 28px 28px;box-shadow:0 20px 50px rgba(4,17,39,.12)}
+.fj-ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:#041127 !important;color:#93de04 !important;font-size:12px;font-weight:900;letter-spacing:.1em;padding:6px 18px;border-radius:999px;white-space:nowrap}
+.fj-oname{text-align:center;font-size:20px;font-weight:900;color:#041127 !important;line-height:1.4}
+.fj-oname small{display:block;font-size:13px;font-weight:700;color:#5ea500 !important;letter-spacing:.06em;margin-top:4px}
+.fj-pr{text-align:center;margin-top:18px}
+.fj-pr-old{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.fj-pr-old s{color:#8a94a3 !important;font-size:18px}
+.fj-save{background:#e7000b !important;color:#ffffff !important;font-size:13px;font-weight:900;padding:3px 12px;border-radius:999px;white-space:nowrap}
+.fj-price-now{display:block;font-size:72px;line-height:1.05;font-weight:800;color:#041127 !important;margin-top:6px;white-space:nowrap}
+.fj-once{display:block;font-size:13.5px;color:#4b5666 !important;margin-top:4px}
+.fj-olist{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid #e3e9ef}
+.fj-olist li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #eef2f6;font-size:15px;color:#041127 !important;font-weight:500}
+.fj-olist li:before{content:"";flex:0 0 20px;height:20px;margin-top:3px;border-radius:50%;background:#93de04 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23041127' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat}
+.fj-obon{margin-top:16px;border:2px dashed #93de04;border-radius:16px;padding:14px 16px;background:#f6fde9 !important}
+.fj-obon-t{font-size:13px;font-weight:900;color:#3f7300 !important;letter-spacing:.06em}
+.fj-obon ul{list-style:none;padding:0;margin:8px 0 0}
+.fj-obon li{font-size:14.5px;color:#041127 !important;padding:5px 0;font-weight:500;display:flex;gap:8px}
+.fj-obon li:before{content:"🎁";flex:0 0 auto}
+.fj-ocard .fj-btn{max-width:none;margin-top:22px;font-size:16.5px;padding:18px 18px}
+.fj-btn-s{display:block;font-size:13px;font-weight:700;opacity:.85;margin-top:2px}
+@media (max-width:520px){.fj-ocard .fj-btn{font-size:15.5px;padding:15px 12px}}
+.fj-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 16px;margin-top:14px;font-size:12.5px;color:#4b5666 !important}
+.fj-trust span{white-space:nowrap}
+
+/* carrusel */
+.fj-car{position:relative;max-width:820px;margin:0 auto}
+.fj-slide{display:none}
+.fj-slide.fj-on{display:block}
+.fj-slide img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:20px;background:#0b1f3b;box-shadow:0 14px 40px rgba(4,17,39,.18)}
+.fj-cap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.fj-cap-l{font-size:12px;color:#4b5666 !important}
+.fj-cap-c{background:#041127 !important;color:#93de04 !important;font-size:11.5px;font-weight:900;letter-spacing:.08em;padding:3px 10px;border-radius:999px}
+.fj-cap-t{font-weight:700;color:#041127 !important;font-size:15.5px;width:100%}
+.fj-arr{position:absolute;top:calc(33% - 22px);width:44px;height:44px;border-radius:50%;border:1px solid #e3e9ef;background:#ffffff !important;color:#041127 !important;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(4,17,39,.15);cursor:pointer;padding:0;z-index:2}
+.fj-prev{left:8px}.fj-next{right:8px}
+.fj-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.fj-dot{height:8px;width:8px;border-radius:999px;border:0;padding:0;background:rgba(4,17,39,.22) !important;cursor:pointer;transition:width .2s}
+.fj-dot.fj-on{width:32px;background:#93de04 !important}
+.fj-count{text-align:center;font-size:13px;color:#4b5666 !important;margin-top:10px !important}
+
+/* qué vas a lograr */
+.fj-tint{background:#eef1f5 !important}
+.fj-res{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fj-res .fj-card h3{font-size:17px}
+.fj-resn{font-family:'Sora',sans-serif !important;font-size:28px;font-weight:800;color:#93de04 !important;-webkit-text-stroke:1px #5ea500;line-height:1;margin-bottom:12px;display:block}
+
+/* garantía */
+.fj-gbox{max-width:760px;margin:0 auto;background:#ffffff !important;border:1px solid #e3e9ef;border-radius:24px;padding:36px 28px;text-align:center;box-shadow:0 10px 36px rgba(4,17,39,.08)}
+.fj-seal{width:96px;height:96px;margin:0 auto 18px;border-radius:50%;background:#041127 !important;color:#93de04 !important;display:flex;flex-direction:column;align-items:center;justify-content:center;border:4px solid #93de04;line-height:1.05}
+.fj-seal b{font-family:'Sora',sans-serif !important;font-size:32px;color:#93de04 !important}
+.fj-seal span{font-size:11px;font-weight:700;color:#ffffff !important}
+.fj-gbox p.fj-gp{margin-top:12px !important;color:#4b5666 !important;font-size:15.5px}
+.fj-gchips{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.fj-gchips span{background:#f6fde9 !important;color:#3f7300 !important;border:1px solid #d6f1a3;font-size:13.5px;font-weight:700;padding:6px 14px;border-radius:999px}
+
+/* FAQ */
+.fj-faq{max-width:760px;margin:0 auto}
+.fj-q{background:#ffffff !important;border:1px solid #e3e9ef;border-radius:16px;margin-bottom:12px;overflow:hidden}
+.fj-q summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 18px;font-weight:700;color:#041127 !important;font-size:15.5px;line-height:1.5}
+.fj-q summary::-webkit-details-marker{display:none}
+.fj-qn{font-family:'Sora',sans-serif !important;color:#5ea500 !important;font-weight:800;font-size:14px;flex:0 0 auto}
+.fj-qx{margin-left:auto;flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#eef1f5 !important;display:flex;align-items:center;justify-content:center;transition:transform .2s;color:#041127 !important;font-size:18px;line-height:1}
+.fj-q[open] .fj-qx{transform:rotate(45deg);background:#93de04 !important}
+.fj-qa{padding:0 18px 18px 52px;color:#4b5666 !important;font-size:14.5px}
+.fj-final{text-align:center;margin-top:32px}
+
+.fj-foot{background:#041127 !important;color:rgba(255,255,255,.5) !important;text-align:center;font-size:12px;padding:28px 16px 32px}
+
+/* barra fija móvil */
+.fj-bar{display:none}
+@media (max-width:767px){
+  .fj-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:999;align-items:center;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#041127 !important;border-top:1px solid rgba(147,222,4,.35);box-shadow:0 -6px 24px rgba(0,0,0,.25)}
+  .fj-bar-p{color:#ffffff !important;line-height:1.2;flex:0 0 auto}
+  .fj-bar-p s{display:block;font-size:11.5px;color:rgba(255,255,255,.55) !important}
+  .fj-bar-p b{font-size:20px;color:#93de04 !important}
+  .fj-bar .fj-btn{flex:1;font-size:14px;padding:12px 10px;max-width:none;box-shadow:none}
+  .fj-foot{padding-bottom:96px}
+  .fj-grid3,.fj-bon,.fj-res{grid-template-columns:1fr}
+  .fj-ben{grid-template-columns:1fr 1fr}
+}
+@media (min-width:768px) and (max-width:1023px){.fj-ben{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){
+  .fj-s{padding:48px 16px}
+  .fj-hero{padding:24px 16px 40px}
+  .fj-h1{font-size:32px;line-height:1.2}
+  .fj-ben{grid-template-columns:1fr}
+  .fj-ben-i{display:grid;grid-template-columns:44px 1fr;column-gap:14px;padding:18px 16px}
+  .fj-ben-i .fj-ico{margin:0;grid-row:span 2}
+  .fj-ocard{padding:36px 18px 22px}
+  .fj-price-now{font-size:56px}
+  .fj-ribbon{top:-14px;font-size:11px;padding:5px 14px}
+  .fj-btn{letter-spacing:.02em}
+  .fj-cd-b{min-width:66px}
+  .fj-cd-b b{font-size:26px}
+  .fj-qa{padding-left:18px}
+  .fj-arr{width:38px;height:38px;top:calc(33% - 19px)}
+  .fj-gbox{padding:30px 18px}
+  .fj-top{font-size:12px}
+}
+@media (max-width:380px){
+  .fj-h1{font-size:28px}
+  .fj-price-now{font-size:48px}
+  .fj-h2{font-size:24px}
+  .fj-cd{gap:8px}
+  .fj-cd-b{min-width:60px}
+  .fj-oname{font-size:18px}
+  .fj-bar .fj-btn{font-size:13px}
+  .fj-bar-p b{font-size:18px}
+}
+</style>
+<div class="fj-root">
+
+<div class="fj-top">🔥 本日限りのオファー<span id="fj-date"></span></div>
+
+<!-- 1 · HERO -->
+<section class="fj-s fj-hero">
+  <div class="fj-in">
+    <span class="fj-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>2026年 新登場</span>
+    <h1 class="fj-h1">バスケ練習メニュー<span class="fj-l fj-num">500</span></h1>
+    <p class="fj-hero-p">すぐに使えるバスケットボールの練習メニューで、準備の時間を節約し、選手を伸ばし、毎回の練習に明確な目的を持たせましょう。</p>
+    <img class="fj-hero-img" src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/hero-jp.jpg" alt="バスケ練習メニュー500 · 練習セッション" width="1080" height="1080">
+    <a class="fj-btn fj-pulse" href="#fj-offer">今すぐアクセスする ↓</a>
+    <p class="fj-safe"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>安全なお支払い · すぐにアクセス</p>
+  </div>
+</section>
+
+<!-- 2 · LO QUE RECIBÍS -->
+<section class="fj-s fj-light">
+  <div class="fj-in">
+    <div class="fj-head">
+      <span class="fj-eyebrow">手に入るもの</span>
+      <h2 class="fj-h2">より良いバスケの練習をつくるためのすべて</h2>
+      <p class="fj-sub">バスケの指導者が、指導者のために作った内容です。</p>
+    </div>
+    <div class="fj-grid3">
+      <div class="fj-card">
+        <div class="fj-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></svg></div>
+        <h3>充実の教材</h3>
+        <p>構成済みの500セッション。すぐに印刷して、そのままコートに持っていけます。</p>
+        <ul class="fj-chips"><li>明確な目標</li><li>詳しい図解</li><li>年代別の段階的な進め方</li></ul>
+      </div>
+      <div class="fj-card">
+        <div class="fj-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>段階的なバスケドリル</h3>
+        <p>選手の成長に沿ったメソッド。ウォーミングアップから試合形式まで。</p>
+        <ul class="fj-chips"><li>スキルと戦術</li><li>フィジカルを組み込んだ練習</li><li>実戦に近い状況</li></ul>
+      </div>
+      <div class="fj-card">
+        <div class="fj-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/><path d="M16 3.1a4 4 0 010 7.8M22 21v-2a4 4 0 00-3-3.9"/></svg></div>
+        <h3>あらゆる年代・レベルに対応</h3>
+        <p>ミニバス、中学・高校の部活、社会人やクラブチームの指導者まで使えます。</p>
+        <ul class="fj-chips"><li>ミニバス〜社会人</li><li>少人数でもチーム全体でも</li><li>現代的なアプローチ</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · BENEFICIOS (navy) -->
+<section class="fj-s fj-navy">
+  <div class="fj-in">
+    <div class="fj-head">
+      <span class="fj-eyebrow">あなたのメリット</span>
+      <h2 class="fj-h2">指導者がこの教材を選ぶ理由</h2>
+      <p class="fj-sub">最初の練習から実感できる、具体的なメリットです。</p>
+    </div>
+    <div class="fj-ben">
+      <div class="fj-ben-i"><div class="fj-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>練習計画の時間を大幅に節約</h3><p>ドリル探しで夜遅くまで悩む必要はもうありません。</p></div>
+      <div class="fj-ben-i"><div class="fj-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/></svg></div><h3>構成の整った練習</h3><p>最初から最後まで、筋の通った流れで進められます。</p></div>
+      <div class="fj-ben-i"><div class="fj-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 20h18M6 16v4M11 11v9M16 6v14"/></svg></div><h3>選手の目に見える成長</h3><p>具体的な結果につながるドリルです。</p></div>
+      <div class="fj-ben-i"><div class="fj-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>自信を持って指導できる</h3><p>しっかり準備して、毎回の練習を堂々とリードできます。</p></div>
+      <div class="fj-ben-i"><div class="fj-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93de04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>活気ある練習、夢中になる選手</h3><p>全員が動き続ける練習で、選手のやる気が続きます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · BONOS -->
+<section class="fj-s fj-light">
+  <div class="fj-in">
+    <div class="fj-head">
+      <span class="fj-eyebrow">本日ご購入の方に</span>
+      <h2 class="fj-h2">強力な特典3つを無料でプレゼント</h2>
+      <p class="fj-sub">ご注文に無料で含まれる、特別な追加価値です。</p>
+    </div>
+    <div class="fj-bon">
+      <div class="fj-bcard">
+        <div class="fj-bimg"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/bonus-1.jpg" alt="バスケ専用スピード＆アジリティドリル100" width="900" height="600" loading="lazy"><span class="fj-btag">特典</span></div>
+        <div class="fj-bbody"><h3>バスケ専用スピード＆アジリティドリル100</h3><p>爆発力、方向転換、ディフェンスのフットワークを伸ばす完全なプログラムです。</p><div class="fj-bval"><s class="fj-num">¥4,980</s><span class="fj-free">無料</span></div></div>
+      </div>
+      <div class="fj-bcard">
+        <div class="fj-bimg"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/bonus-2.jpg" alt="ボールを使ったコンディショニング50" width="900" height="600" loading="lazy"><span class="fj-btag">特典</span></div>
+        <div class="fj-bbody"><h3>ボールを使ったコンディショニング50</h3><p>バスケのスキルから切り離さずに、試合で通用するコンディションをつくります。</p><div class="fj-bval"><s class="fj-num">¥3,980</s><span class="fj-free">無料</span></div></div>
+      </div>
+      <div class="fj-bcard">
+        <div class="fj-bimg"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/bonus-3-jp.jpg" alt="週間練習計画テンプレート30" width="900" height="600" loading="lazy"><span class="fj-btag">特典</span></div>
+        <div class="fj-bbody"><h3>週間練習計画テンプレート30</h3><p>記入するだけのシートで、1週間の練習を簡単にプロらしく組み立てられます。</p><div class="fj-bval"><s class="fj-num">¥2,980</s><span class="fj-free">無料</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · COUNTDOWN + OFERTA -->
+<section class="fj-s fj-offer-s" id="fj-offer">
+  <div class="fj-in">
+    <span class="fj-cd-l">オファー終了まで</span>
+    <div class="fj-cd" aria-live="off">
+      <div class="fj-cd-b"><b class="fj-num" id="fj-h">00</b><span>時間</span></div>
+      <div class="fj-cd-b"><b class="fj-num" id="fj-m">00</b><span>分</span></div>
+      <div class="fj-cd-b"><b class="fj-num" id="fj-sec">00</b><span>秒</span></div>
+    </div>
+    <div class="fj-head" style="margin-bottom:0">
+      <span class="fj-pill-red">期間限定オファー</span>
+      <h2 class="fj-h2">コンプリートパッケージ</h2>
+      <p class="fj-sub">すべてを一度に手に入れられるパッケージです。</p>
+    </div>
+    <div class="fj-ocard">
+      <span class="fj-ribbon">おすすめ · 特典3つ付き</span>
+      <div class="fj-oname">バスケ練習メニュー500<small>すぐ使える500セッション + 特典ガイド3冊</small></div>
+      <div class="fj-pr">
+        <div class="fj-pr-old"><s class="fj-num">{{original_price}}</s><span class="fj-save">{{savings}} OFF</span></div>
+        <span class="fj-price-now fj-num">{{price}}</span>
+        <span class="fj-once">一回払い · 追加料金なし</span>
+      </div>
+      <ul class="fj-olist">
+        <li>500の練習セッション</li>
+        <li>カテゴリー別に整理されたドリル</li>
+        <li>わかりやすい練習の手順</li>
+        <li>印刷できるPDF形式</li>
+        <li>すぐにデジタルでアクセス</li>
+      </ul>
+      <div class="fj-obon">
+        <span class="fj-obon-t">無料特典3つ</span>
+        <ul>
+          <li>バスケ専用スピード＆アジリティドリル100</li>
+          <li>ボールを使ったコンディショニング50</li>
+          <li>週間練習計画テンプレート30</li>
+        </ul>
+      </div>
+      <a class="fj-btn fj-pulse" id="fj-buy" href="/checkout"><span>コンプリートパッケージを手に入れる<span class="fj-btn-s">{{price}} · 一回払い</span></span></a>
+      <div class="fj-trust"><span>🔒 100%安全なお支払い</span><span>⚡ すぐにアクセス</span><span>✅ 7日間保証</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · VISTA PREVIA -->
+<section class="fj-s fj-light">
+  <div class="fj-in">
+    <div class="fj-head">
+      <span class="fj-eyebrow">コンテンツのプレビュー</span>
+      <h2 class="fj-h2">手に入る内容をのぞいてみましょう</h2>
+      <p class="fj-sub">コレクション全体から、練習ドリルの例をいくつかご紹介します。矢印で次をご覧ください。</p>
+    </div>
+    <div class="fj-car" id="fj-car">
+      <div class="fj-slide fj-on"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/ejemplo-1-jp.jpg" alt="ピック＆ロール 3対3" width="1200" height="800"><div class="fj-cap"><span class="fj-cap-l">サンプル画像</span><span class="fj-cap-c">高校</span><span class="fj-cap-t">ピック＆ロール 3対3</span></div></div>
+      <div class="fj-slide"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/ejemplo-2-jp.jpg" alt="ジグザグ・ドリブル" width="1200" height="800" loading="lazy"><div class="fj-cap"><span class="fj-cap-l">サンプル画像</span><span class="fj-cap-c">ミニバス</span><span class="fj-cap-t">ジグザグ・ドリブル</span></div></div>
+      <div class="fj-slide"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/ejemplo-3-jp.jpg" alt="シェルディフェンス 4対4" width="1200" height="800" loading="lazy"><div class="fj-cap"><span class="fj-cap-l">サンプル画像</span><span class="fj-cap-c">中学</span><span class="fj-cap-t">シェルディフェンス 4対4</span></div></div>
+      <div class="fj-slide"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/ejemplo-4-jp.jpg" alt="3対2 ファストブレイク" width="1200" height="800" loading="lazy"><div class="fj-cap"><span class="fj-cap-l">サンプル画像</span><span class="fj-cap-c">高校</span><span class="fj-cap-t">3対2 ファストブレイク</span></div></div>
+      <div class="fj-slide"><img src="https://recursos-pdf-hub.github.io/entregas-5/basquet-jp/img/ejemplo-5-jp.jpg" alt="ボックスアウト＆リバウンド" width="1200" height="800" loading="lazy"><div class="fj-cap"><span class="fj-cap-l">サンプル画像</span><span class="fj-cap-c">全年代</span><span class="fj-cap-t">ボックスアウト＆リバウンド</span></div></div>
+      <button class="fj-arr fj-prev" type="button" aria-label="前へ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="fj-arr fj-next" type="button" aria-label="次へ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      <div class="fj-dots"><button class="fj-dot fj-on" type="button" aria-label="1"></button><button class="fj-dot" type="button" aria-label="2"></button><button class="fj-dot" type="button" aria-label="3"></button><button class="fj-dot" type="button" aria-label="4"></button><button class="fj-dot" type="button" aria-label="5"></button></div>
+      <p class="fj-count fj-num"><span id="fj-ci">1</span> / 5</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · QUÉ VAS A LOGRAR -->
+<section class="fj-s fj-tint">
+  <div class="fj-in">
+    <div class="fj-head">
+      <span class="fj-eyebrow">期待できる変化</span>
+      <h2 class="fj-h2">このセットで手に入る変化</h2>
+      <p class="fj-sub">毎週の練習づくりが、こう変わります。</p>
+    </div>
+    <div class="fj-res">
+      <div class="fj-card"><span class="fj-resn">01</span><h3>練習前夜の準備がラクに</h3><p>年代とテーマを選ぶだけで、その日の練習メニューが決まります。</p></div>
+      <div class="fj-card"><span class="fj-resn">02</span><h3>選手が飽きない練習に</h3><p>スキル・戦術・フィジカルを組み合わせた多彩なドリルで、毎回の練習が新鮮になります。</p></div>
+      <div class="fj-card"><span class="fj-resn">03</span><h3>シーズンの計画が立てやすく</h3><p>週間計画テンプレートで、練習の流れがひと目でわかります。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · GARANTÍA -->
+<section class="fj-s fj-light">
+  <div class="fj-in">
+    <div class="fj-gbox">
+      <div class="fj-seal"><b>7</b><span>日間保証</span></div>
+      <span class="fj-eyebrow">安心してご購入ください · 100%保証</span>
+      <h2 class="fj-h2">無条件の7日間保証</h2>
+      <p class="fj-gp">7日間、すべての教材をじっくりお試しください。ご満足いただけない場合は、理由を問わず全額を返金いたします。</p>
+      <div class="fj-gchips"><span>7日以内の返金</span><span>理由は問いません</span><span>リスクは当方が負担します</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · FAQ -->
+<section class="fj-s fj-tint">
+  <div class="fj-in">
+    <div class="fj-head">
+      <span class="fj-eyebrow">ご質問にお答えします</span>
+      <h2 class="fj-h2">よくあるご質問</h2>
+      <p class="fj-sub">始める前に知っておきたいことをまとめました。</p>
+    </div>
+    <div class="fj-faq">
+      <details class="fj-q"><summary><span class="fj-qn">01</span>教材はどのように受け取れますか？<span class="fj-qx">+</span></summary><p class="fj-qa">お支払い完了後すぐに、PDF形式の全セッションにアクセスできるダウンロードリンクをメールでお届けします。</p></details>
+      <details class="fj-q"><summary><span class="fj-qn">02</span>どの年代・レベルに対応していますか？<span class="fj-qx">+</span></summary><p class="fj-qa">ミニバスから中学・高校の部活、社会人まで、それぞれの年代とレベルに合った段階的な進め方になっています。</p></details>
+      <details class="fj-q"><summary><span class="fj-qn">03</span>セッションは印刷できますか？<span class="fj-qx">+</span></summary><p class="fj-qa">はい。すべてPDFで作られているので、簡単に印刷してそのままコートに持っていけます。</p></details>
+      <details class="fj-q"><summary><span class="fj-qn">04</span>初心者の指導者でも使えますか？<span class="fj-qx">+</span></summary><p class="fj-qa">もちろんです。初めてコーチを務める方にも、経験豊富な指導者にも使いやすい構成になっています。</p></details>
+      <details class="fj-q"><summary><span class="fj-qn">05</span>支払いは安全ですか？<span class="fj-qx">+</span></summary><p class="fj-qa">はい。すべてのお支払いは、認証済みの100%安全なプラットフォームで処理されます。</p></details>
+    </div>
+    <div class="fj-final"><a class="fj-btn fj-pulse" href="#fj-offer">今すぐアクセスする ↓</a></div>
+  </div>
+</section>
+
+<footer class="fj-foot">© 2026 バスケ練習メニュー500 · 無断転載を禁じます</footer>
+
+<div class="fj-bar">
+  <div class="fj-bar-p"><s class="fj-num">{{original_price}}</s><b class="fj-num">{{price}}</b></div>
+  <a class="fj-btn" href="#fj-offer">今すぐアクセス ↓</a>
+</div>
+
+</div>
+<script>
+(function(){
+  function leer(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+  function guardar(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+  // fecha dinámica en japonés
+  try{
+    var d=new Date(),w='日月火水木金土'.charAt(d.getDay());
+    var el=document.getElementById('fj-date');
+    if(el)el.textContent=' · '+(d.getMonth()+1)+'月'+d.getDate()+'日（'+w+'）';
+  }catch(e){}
+  // cuenta regresiva hasta medianoche (guardada por día)
+  var hoy=new Date().toDateString(),fin=parseInt(leer('fj_cd_fin')||'0',10);
+  if(!fin||isNaN(fin)||leer('fj_cd_dia')!==hoy||fin<Date.now()){
+    var m=new Date();m.setHours(23,59,59,999);fin=m.getTime();guardar('fj_cd_fin',String(fin));guardar('fj_cd_dia',hoy);
+  }
+  var eh=document.getElementById('fj-h'),em=document.getElementById('fj-m'),es=document.getElementById('fj-sec');
+  function p(n){return(n<10?'0':'')+n;}
+  function tick(){var s=Math.max(0,Math.floor((fin-Date.now())/1000));if(eh)eh.textContent=p(Math.floor(s/3600));if(em)em.textContent=p(Math.floor(s%3600/60));if(es)es.textContent=p(s%60);}
+  tick();setInterval(tick,1000);
+  // carrusel
+  var car=document.getElementById('fj-car');
+  if(car){
+    var sl=car.querySelectorAll('.fj-slide'),dt=car.querySelectorAll('.fj-dot'),ci=document.getElementById('fj-ci'),i=0;
+    function go(n){i=(n+sl.length)%sl.length;for(var k=0;k<sl.length;k++){sl[k].classList.toggle('fj-on',k===i);dt[k].classList.toggle('fj-on',k===i);}if(ci)ci.textContent=i+1;}
+    car.querySelector('.fj-prev').addEventListener('click',function(){go(i-1);});
+    car.querySelector('.fj-next').addEventListener('click',function(){go(i+1);});
+    for(var k=0;k<dt.length;k++)(function(k){dt[k].addEventListener('click',function(){go(k);});})(k);
+    var x0=null;car.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+    car.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?i+1:i-1);x0=null;},{passive:true});
+  }
+})();
+</script>
